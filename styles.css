@@ -14,5 +14,16 @@ body {
     padding: 0;
 }
 
+.restaurants_cards {
+    width: 50%;
+    height: 150px;
+}
+
+footer {
+    background-color: grey;
+    text-decoration: none;
+    color: white;
+}
+
 
 /*# sourceMappingURL=styles.css.map */
