@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Shrikhand';
+    src: url(https://fonts.google.com/specimen/Shrikhand?query=shrikhand#standard-styles);
+    font-family: 'Roboto';
+    src: url(https://fonts.google.com/specimen/Roboto?query=roboto);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.active_button {
+    background: linear-gradient(#FF79DA, #9356dc)
+}
