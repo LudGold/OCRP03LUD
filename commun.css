@@ -1,12 +1,41 @@
-@font-face {
-    font-family: 'Shrikhand';
-    src: url(https://fonts.google.com/specimen/Shrikhand?query=shrikhand#standard-styles);
-    font-family: 'Roboto';
-    src: url(https://fonts.google.com/specimen/Roboto?query=roboto);
-    font-style: normal;
-    font-weight: 400;
-}
-
-.active_button {
-    background: linear-gradient(#FF79DA, #9356dc)
-}
+            @font-face {
+                font-family: 'Shrikhand';
+                src: url(https://fonts.google.com/specimen/Shrikhand?query=shrikhand#standard-styles);
+                font-family: 'Roboto';
+                src: url(https://fonts.google.com/specimen/Roboto?query=roboto);
+                font-style: normal;
+                font-weight: 400;
+            }
+            
+            .active_button {
+                background: linear-gradient(#FF79DA, #9356dc)
+            }
+            
+            @media screen and (min-width: 900px) {
+                .love {
+                    background-clip: padding-box;
+                    background-image: linear-gradient(#FF79DA, #9356dc);
+                }
+            }
+            
+            footer {
+                background-color: black;
+                text-decoration: none;
+                color: white;
+                padding: 10px;
+                margin-top: 4rem;
+                font-size: 20px;
+            }
+            
+            footer p {
+                line-height: 45px;
+                font-family: 'Shrikhand';
+            }
+            
+            footer li {
+                font-family: 'roboto';
+            }
+            
+            footer ul {
+                line-height: 30px;
+            }
