@@ -18,6 +18,10 @@
                 }
             }
             
+            .heart {
+                height: 20px;
+            }
+            
             footer {
                 background-color: black;
                 text-decoration: none;
