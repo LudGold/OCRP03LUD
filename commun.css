@@ -12,14 +12,14 @@
             }
             
             @media screen and (min-width: 900px) {
-                .love {
+                .content-box {
                     background-clip: padding-box;
-                    background-image: linear-gradient(#FF79DA, #9356dc);
+                    background: linear-gradient(#FF79DA, #9356dc);
                 }
-            }
-            
-            .heart {
-                height: 20px;
+                .content-box img {
+                    height: 20px;
+                    width: 20px;
+                }
             }
             
             footer {
