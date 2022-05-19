@@ -11,16 +11,16 @@
                 background: linear-gradient(#FF79DA, #9356dc)
             }
             
-            @media screen and (min-width: 900px) {
+            /* @media screen and (min-width: 900px) {
                 .content-box {
                     background-clip: padding-box;
                     background: linear-gradient(#FF79DA, #9356dc);
-                }
-                .content-box img {
+                } */
+                /* .content-box img {
                     height: 20px;
                     width: 20px;
-                }
-            }
+                } */
+            
             
             footer {
                 background-color: black;
