@@ -8,8 +8,126 @@
 }
 
 /* commun aux 5 fichiers */
+.bloc-left {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bloc-left .starter_text {
+  width: 80%;
+}
+
+.bloc-left .starter_text p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.bloc-right {
+  width: 0%;
+  display: none;
+}
+
+.starter-list:hover .bloc-left {
+  width: 80%;
+}
+
+.starter-list:hover .bloc-right {
+  display: block;
+  -webkit-animation: 2s checkbox;
+          animation: 2s checkbox;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background: #99e2d0;
+  position: relative;
+  height: 75px;
+  text-align: center;
+  border-radius: 0 25% 25% 0;
+}
+
+.starter-list:hover .bloc-right .fa-circle-check {
+  color: white;
+  -webkit-animation: 0.7s check;
+          animation: 0.7s check;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+@-webkit-keyframes checkbox {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes checkbox {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@-webkit-keyframes check {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes check {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.starter-list {
+  background: white;
+  margin-bottom: 24px;
+  border-radius: 23px;
+  -webkit-box-shadow: 6px 6px 9px #eceaea;
+          box-shadow: 6px 6px 9px #eceaea;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 95%;
+}
+
 h1 {
   font-size: 40px;
+  font-family: 'Shrikhand';
 }
 
 h2 {
@@ -77,10 +195,6 @@ body {
 }
 
 /* ACCUEILPAGE */
-h2 {
-  font-family: 'Roboto';
-}
-
 #logo {
   text-align: center;
 }
@@ -205,19 +319,14 @@ h2 {
   }
 }
 
-.search {
-  border: 0px;
-  background: #bbb7b7;
-  margin-top: 22px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
 .search_form {
   border: 0px;
   background-color: #bbb7b7;
   margin-bottom: 0px;
   height: 70px;
+  margin-top: 22px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .search_place {
@@ -236,7 +345,6 @@ h2 {
           align-items: center;
   padding: 16px 12px 12px 12px;
   color: white;
-  margin-bottom: 86px;
   font-size: 26px;
 }
 
@@ -325,11 +433,11 @@ i.fa-solid.fa-store {
 .New {
   background: #99e2d0;
   width: 140px;
-  left: 24rem;
   text-align: center;
+  margin-left: 14rem;
   font-size: 15px;
-  margin-top: 20px;
-  margin-right: 20px;
+  margin-bottom: 5px;
+  position: absolute;
 }
 
 #Restaurants {
@@ -358,89 +466,12 @@ i.fa-solid.fa-store {
   width: 100%;
 }
 
-/* MENUPAGE */
-.menu_logo {
-  font-family: 'Shrikhand';
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.return {
-  border: none;
-  background-color: transparent;
-  text-align: left;
-}
-
-.fa-arrow-left {
-  font-size: 35px;
-}
-
-.description_menu h2 {
-  font-family: 'Shrikhand';
-}
-
-.restaurant_menu {
-  background: #eceaea;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.description_menu h3 {
-  font-size: 22px;
-  border-bottom: #99e2d0 solid 3px;
-  width: 12%;
-}
-
-.description {
-  font-family: 'Roboto';
-}
-
-.menu_pages .description_menu {
-  background-color: #eceaea;
-  border-radius: 7%;
-}
-
-.restaurants_picture {
-  width: 100%;
-  height: 250px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 7% 7% 0% 0%;
-}
-
-strong {
-  font-size: 20px;
-}
-
 .emptyheart {
   position: relative;
   width: 100%;
   height: 200px;
-  opacity: 1;
+  left: 0;
+  bottom: 0;
 }
 
 .pinkheart {
@@ -455,10 +486,10 @@ strong {
 .pinkheart:hover {
   cursor: pointer;
   z-index: 5;
-  -webkit-animation: empty  0.1s ease-in-out;
-          animation: empty  0.1s ease-in-out;
-  -webkit-animation: fill 2s  forwards;
-          animation: fill 2s  forwards;
+  -webkit-animation: empty 0.1s ease-in-out;
+          animation: empty 0.1s ease-in-out;
+  -webkit-animation: fill 2s forwards;
+          animation: fill 2s forwards;
 }
 
 .pinkheart:hover:after {
@@ -593,175 +624,95 @@ strong {
   }
 }
 
-.animation_checkbox #checkbox {
-  display: none;
-}
-
-.animation_checkbox:hover #checkbox {
-  display: block;
-  -webkit-animation: 0.7s checkbox;
-          animation: 0.7s checkbox;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  width: 0%;
-}
-
-.animation_checkbox:hover .label {
-  background: #99e2d0;
-  position: relative;
-  height: 75px;
-  width: 75px;
-  text-align: center;
-  border-radius: 0 25% 25% 0;
-}
-
-.animation_checkbox:hover .starter_content {
-  -webkit-animation: 0.7s reduce;
-          animation: 0.7s reduce;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.animation_checkbox:hover .starter_content .starter_text3 {
-  width: 80%;
-}
-
-.animation_checkbox:hover .starter_content .starter_text3 p {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 10px;
-}
-
-@-webkit-keyframes checkbox {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 20%;
-  }
-}
-
-@keyframes checkbox {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 20%;
-  }
-}
-
-@-webkit-keyframes reduce {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 80%;
-  }
-}
-
-@keyframes reduce {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 80%;
-  }
-}
-
-.animation_checkbox:hover .fa-circle-check {
-  color: white;
-  -webkit-animation: 0.7s check;
-          animation: 0.7s check;
-  -webkit-animation-delay: -90ms;
-          animation-delay: -90ms;
-  margin-top: 30px;
-}
-
-@-webkit-keyframes check {
-  0% {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    -webkit-animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.19);
-            animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.19);
-  }
-  50% {
-    -webkit-transform: rotate(25deg);
-            transform: rotate(25deg);
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  75% {
-    -webkit-transform: rotate(50deg);
-            transform: rotate(50deg);
-  }
-  100% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-}
-
-@keyframes check {
-  0% {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    -webkit-animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.19);
-            animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.19);
-  }
-  50% {
-    -webkit-transform: rotate(25deg);
-            transform: rotate(25deg);
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  75% {
-    -webkit-transform: rotate(50deg);
-            transform: rotate(50deg);
-  }
-  100% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-}
-
-/* .animation_checkbox:after {
-            animation: slideleft;
-            cursor: url('images/Cursor.png'), pointer;
-        } */
-.starter-list {
-  background: white;
-  margin-bottom: 24px;
-  border-radius: 23px;
-  -webkit-box-shadow: 6px 6px 9px #eceaea;
-          box-shadow: 6px 6px 9px #eceaea;
-  color: #000;
+/* MENUPAGE */
+.menu_logo {
+  font-family: 'Shrikhand';
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 95%;
 }
 
-.starter_content {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.return {
+  border: none;
+  background-color: transparent;
+  text-align: left;
+}
+
+.title_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.title_menu h2 {
+  font-family: 'Shrikhand';
+  font-size: 30px;
+}
+
+.fa-arrow-left {
+  font-size: 35px;
+}
+
+.restaurant_menu {
+  background: #eceaea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.description h3 {
+  font-size: 22px;
+  border-bottom: #99e2d0 solid 3px;
+  width: 12%;
+}
+
+.description {
+  font-family: 'Roboto';
+}
+
+.menu_pages .description {
+  background-color: #eceaea;
+  border-radius: 7%;
+}
+
+.restaurants_picture {
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7% 7% 0% 0%;
+}
+
+strong {
+  font-size: 20px;
 }
 
 .price {
@@ -925,4 +876,3 @@ input.search_order {
             transform: translateY(0px);
   }
 }
-/*# sourceMappingURL=styles.css.map */
