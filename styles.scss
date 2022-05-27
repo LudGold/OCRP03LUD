@@ -14,7 +14,11 @@
             justify-content: space-between;
             align-items: center;
             .starter_text {
-                width: 80%;
+                width: 100%;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
                 p {
                     text-overflow: ellipsis;
                     white-space: nowrap;
@@ -24,14 +28,31 @@
             }
         }
         
+        .price {
+            font-weight: bold;
+        }
+        /* 
+        @keyframes price{
+            0%{
+               
+                margin-right: 0px;
+            }
+            100%{
+              
+                margin-right: 50px;
+            }
+        } */
+        
         .bloc-right {
             width: 0%;
             display: none;
+            padding: 20px;
         }
         
         .starter-list:hover {
             .bloc-left {
-                width: 80%;
+                animation: 2s decrease;
+                animation-fill-mode: forwards;
             }
             .bloc-right {
                 display: block;
@@ -41,7 +62,7 @@
                 position: relative;
                 height: 75px;
                 text-align: center;
-                border-radius: 0 25% 25% 0;
+                border-radius: 0 25px 25px 0;
                 .fa-circle-check {
                     color: white;
                     animation: 0.7s check;
@@ -61,6 +82,15 @@
             }
         }
         
+        @keyframes decrease {
+            0% {
+                width: 100%;
+            }
+            100% {
+                width: 80%;
+            }
+        }
+        
         //ancienne partie animation checkbox
         @keyframes check {
             0% {
@@ -74,7 +104,7 @@
         .starter-list {
             background: white;
             margin-bottom: 24px;
-            border-radius: 23px;
+            border-radius: 25px;
             box-shadow: 6px 6px 9px #eceaea;
             color: #000;
             display: flex;
@@ -85,7 +115,6 @@
         
         h1 {
             font-size: 40px;
-            font-family: 'Shrikhand';
         }
         
         h2 {
@@ -96,7 +125,7 @@
             font-size: 30px;
             font-weight: 400;
             font-weight: bold;
-            font-family: 'roboto';
+            font-family: 'Roboto';
         }
         
         h4 {
@@ -165,7 +194,7 @@
             align-content: center;
             align-items: center;
             justify-content: center;
-            display: none;
+            /* display: none; */
         }
         
         .container {
@@ -175,7 +204,7 @@
             width: 100%;
             height: 100%;
             z-index: 10;
-            display: none;
+            /* display: none; */
         }
         
         .preloader:after {
@@ -237,10 +266,15 @@
         
         .search_place {
             text-align: center;
+            height: 30rem;
         }
         
         .search_bloc {
             background: #bbb7b7;
+        }
+        
+        .search_bloc h1 {
+            font-family: 'roboto', arial, helvetica;
         }
         
         .explorer {
@@ -293,14 +327,16 @@
             font-size: 30px;
             margin-left: 20px;
         }
-        
-        .btn_choice {
+        /*   mettre espace pour gris et blanc background comme maquette
+      .btn_choice {
             margin-bottom: 100px;
             background: white;
-        }
+        } 
+         */
         
         .btn a {
             color: black;
+            text-decoration: none;
         }
         
         i.fa-solid.fa-mobile-screen-button {
@@ -323,11 +359,17 @@
             margin-left: 20px;
         }
         
+        .Text_cards {
+            position: relative;
+            margin-bottom: 1rem;
+            line-height: 28px;
+        }
+        
         .New {
             background: #99e2d0;
             width: 140px;
             text-align: center;
-            margin-left: 14rem;
+            left: 15rem;
             font-size: 15px;
             margin-bottom: 5px;
             position: absolute;
@@ -337,12 +379,20 @@
             background-color: rgb(236, 234, 234);
         }
         
+        .content-box {
+            position: absolute;
+            left: 20rem;
+            top: 35px;
+        }
+        
+        .Text_cards h3 {
+            margin-bottom: 10px;
+        }
+        
         .restaurants_cards {
             background: white;
             display: flex;
             flex-direction: column;
-            margin-left: 24px;
-            margin-right: 24px;
             margin-bottom: 24px;
             border-radius: 23px;
             box-shadow: 6px 6px 9px #eceaea;
@@ -351,12 +401,12 @@
         
         .restaurants_img {
             width: 100%;
+            object-fit: cover;
         }
         
         .emptyheart {
             position: relative;
             width: 100%;
-            height: 200px;
             left: 0;
             bottom: 0;
         }
@@ -365,7 +415,6 @@
             position: absolute;
             width: 100%;
             opacity: 0;
-            height: 200px;
             background-size: 100% 0px;
             background-position: center top;
         }
@@ -508,10 +557,6 @@
         
         strong {
             font-size: 20px;
-        }
-        
-        .price {
-            font-weight: bold;
         }
         
         .main-list {

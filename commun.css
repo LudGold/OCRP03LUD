@@ -11,7 +11,7 @@
                 background: linear-gradient(#FF79DA, #9356dc)
             }
             
-            /* @media screen and (min-width: 900px) {
+            /* @media screen and (min-width: 993px) {
                 .content-box {
                     background-clip: padding-box;
                     background: linear-gradient(#FF79DA, #9356dc);
@@ -20,6 +20,19 @@
                     height: 20px;
                     width: 20px;
                 } */
+
+                /* @media screen and (min-width: 993px) {
+                    .description h3{
+                        width:3%;
+                    }
+                    .bloc-right {
+                        border-radius: 0px 23px 23px 0px
+            
+            
+        }
+                } */
+
+
             
             
             footer {
