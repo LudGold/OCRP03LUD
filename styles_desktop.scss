@@ -1,0 +1,17 @@
+   @media screen and (min-width: 993px) {
+       .restaurants_cards {
+           width: 20%;
+       }
+       .btn.btn-number {
+           flex-direction: row;
+           flex-wrap: nowrap;
+       }
+       .btn-number__1,
+       .btn-number__2,
+       .btn-number__3 {
+           flex-direction: row;
+           align-content: space-around;
+           justify-content: center;
+           align-items: center;
+       }
+   }
