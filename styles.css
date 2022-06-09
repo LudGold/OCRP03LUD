@@ -551,6 +551,12 @@ i.fa-solid.fa-store {
           align-items: flex-end;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
 .New {
   background: #99e2d0;
   width: 30%;
@@ -633,25 +639,6 @@ i.fa-solid.fa-store {
 .pinkheart:hover:after {
   height: 100%;
   top: 0%;
-  opacity: 0;
-}
-
-@-webkit-keyframes empty {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes empty {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 @-webkit-keyframes fill {
@@ -691,13 +678,12 @@ i.fa-solid.fa-store {
       -ms-flex-align: center;
           align-items: center;
   height: 6rem;
-  margin-right: 8rem;
+  background: white;
 }
 
 .return {
   border: none;
-  background-color: transparent;
-  text-align: left;
+  background: white;
 }
 
 .title_menu {
@@ -711,12 +697,12 @@ i.fa-solid.fa-store {
       -ms-flex-align: baseline;
           align-items: baseline;
   position: relative;
-  border: #eceaea 57px solid;
+  border: #eceaea 40px solid;
   border-radius: 15%;
-  top: 10rem;
+  top: -2rem;
 }
 
-.title_menu h2 {
+.title_menu h1 {
   font-family: 'Shrikhand';
   font-size: 30px;
 }
@@ -750,7 +736,6 @@ i.fa-solid.fa-store {
 
 .description {
   font-family: 'Roboto';
-  margin-top: 10rem;
 }
 
 .menu_pages .description {
@@ -763,7 +748,6 @@ i.fa-solid.fa-store {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 0% 0% 6% 6%;
 }
 
 section {
@@ -782,6 +766,7 @@ strong {
   width: 40%;
   text-align: center;
   margin-left: 7rem;
+  margin-top: 40px;
 }
 
 input.search_order {
@@ -789,6 +774,7 @@ input.search_order {
   border: none;
   font-size: 20px;
   color: white;
+  margin-bottom: 6px;
 }
 
 .animation_menu:nth-child(1n+1) {

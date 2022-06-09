@@ -2,9 +2,14 @@
        .restaurants_cards {
            width: 20%;
        }
+       .order {
+           width: 280px;
+           margin-left: 38%;
+       }
        .btn.btn-number {
            flex-direction: row;
            flex-wrap: nowrap;
+           width: 70%;
        }
        .btn-number__1,
        .btn-number__2,
@@ -13,5 +18,10 @@
            align-content: space-around;
            justify-content: center;
            align-items: center;
+           margin-right: 20px;
+       }
+       ul {
+           display: flex;
+           justify-content: space-around;
        }
    }

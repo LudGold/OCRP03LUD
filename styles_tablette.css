@@ -1,10 +1,12 @@
-@font-face {
-  font-family: 'Shrikhand';
-  src: url(https://fonts.google.com/specimen/Shrikhand?query=shrikhand#standard-styles);
-  font-family: 'Roboto';
-  src: url(https://fonts.google.com/specimen/Roboto?query=roboto);
-  font-style: normal;
-  font-weight: 400;
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .order {
+    margin-left: 15rem;
+  }
 }
-
-/* commun aux 5 fichiers */
