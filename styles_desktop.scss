@@ -2,9 +2,22 @@
        .restaurants_cards {
            width: 20%;
        }
+       .restaurants_picture {
+           width: 80%;
+           height: 80%;
+           border-radius: 246px;
+           margin-left: 14rem;
+       }
+       .title_menu {
+           justify-content: space-around;
+           position: sticky;
+       }
        .order {
            width: 280px;
            margin-left: 38%;
+       }
+       .description h3 {
+           width: 2%;
        }
        .btn.btn-number {
            flex-direction: row;

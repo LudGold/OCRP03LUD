@@ -1,3 +1,4 @@
+/* commun aux 5 fichiers */
 @font-face {
   font-family: 'Shrikhand';
   src: url(https://fonts.google.com/specimen/Shrikhand?query=shrikhand#standard-styles);
@@ -7,185 +8,14 @@
   font-weight: 400;
 }
 
-/* commun aux 5 fichiers */
 body {
   background: #eceaea;
-}
-
-.bloc-left {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.bloc-left .starter_text,
-.bloc-left .main_text,
-.bloc-left .dessert_text {
-  width: 100%;
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.bloc-left .starter_text p,
-.bloc-left .main_text p,
-.bloc-left .dessert_text p {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-bottom: 0px;
-}
-
-.price {
-  font-weight: bold;
-}
-
-/* 
-        @keyframes price{
-            0%{
-               
-                margin-right: 0px;
-            }
-            100%{
-              
-                margin-right: 50px;
-            }
-        } */
-.bloc-right {
-  width: 0%;
-  display: none;
-  padding: 20px;
-}
-
-.starter-list:hover .bloc-left,
-.main-list:hover .bloc-left,
-.dessert-list:hover .bloc-left {
-  -webkit-animation: 2s decrease;
-          animation: 2s decrease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.starter-list:hover .bloc-right,
-.main-list:hover .bloc-right,
-.dessert-list:hover .bloc-right {
-  display: block;
-  -webkit-animation: 2s checkbox;
-          animation: 2s checkbox;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  background: #99e2d0;
   position: relative;
-  height: 75px;
-  text-align: center;
-  border-radius: 0 25px 25px 0;
-}
-
-.starter-list:hover .bloc-right .fa-circle-check,
-.main-list:hover .bloc-right .fa-circle-check,
-.dessert-list:hover .bloc-right .fa-circle-check {
-  color: white;
-  -webkit-animation: 0.7s check;
-          animation: 0.7s check;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 30px;
-}
-
-@-webkit-keyframes checkbox {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 20%;
-  }
-}
-
-@keyframes checkbox {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 20%;
-  }
-}
-
-@-webkit-keyframes decrease {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-@keyframes decrease {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 80%;
-  }
-}
-
-@-webkit-keyframes check {
-  0% {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@keyframes check {
-  0% {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-.starter-list,
-.main-list,
-.dessert-list {
-  background: white;
-  margin-bottom: 24px;
-  border-radius: 25px;
-  -webkit-box-shadow: 6px 6px 9px #eceaea;
-          box-shadow: 6px 6px 9px #eceaea;
-  color: #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 95%;
 }
 
 h1 {
@@ -220,7 +50,66 @@ h5 {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356dc));
   background: linear-gradient(#FF79DA, #9356dc);
   font-family: 'Roboto';
+  -webkit-box-shadow: 6px 6px 9px lightgrey;
+          box-shadow: 6px 6px 9px lightgrey;
   color: white;
+}
+
+.active_button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 12px 17px darkgrey;
+          box-shadow: 10px 12px 17px darkgrey;
+}
+
+.content-box {
+  position: relative;
+}
+
+.emptyheart {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.pinkheart {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  background-size: 100% 0px;
+  background-position: center top;
+}
+
+.pinkheart:hover {
+  cursor: pointer;
+  z-index: 5;
+  -webkit-animation: empty 0.1s ease-in-out;
+          animation: empty 0.1s ease-in-out;
+  -webkit-animation: fill 2s forwards;
+          animation: fill 2s forwards;
+}
+
+.pinkheart:hover:after {
+  height: 100%;
+  top: 0%;
+}
+
+@-webkit-keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 footer {
@@ -248,24 +137,12 @@ footer ul {
   list-style: none;
 }
 
-body {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  position: relative;
-}
-
 /* ACCUEILPAGE */
 #logo {
   text-align: center;
 }
 
-.logo {
-  font-family: 'Shrikhand';
-}
-
+/* ANIMATION PRELOADER SPINNER LOADING */
 .preloader {
   margin: auto;
   width: 100%;
@@ -579,10 +456,6 @@ a {
       justify-content: space-around;
 }
 
-.content-box {
-  position: relative;
-}
-
 .Text_cards h3 {
   margin-bottom: 10px;
 }
@@ -613,52 +486,6 @@ a {
   border-radius: 6% 6% 0% 0%;
 }
 
-.emptyheart {
-  width: 100%;
-  left: 0;
-  bottom: 0;
-}
-
-.pinkheart {
-  position: absolute;
-  width: 100%;
-  opacity: 0;
-  background-size: 100% 0px;
-  background-position: center top;
-}
-
-.pinkheart:hover {
-  cursor: pointer;
-  z-index: 5;
-  -webkit-animation: empty 0.1s ease-in-out;
-          animation: empty 0.1s ease-in-out;
-  -webkit-animation: fill 2s forwards;
-          animation: fill 2s forwards;
-}
-
-.pinkheart:hover:after {
-  height: 100%;
-  top: 0%;
-}
-
-@-webkit-keyframes fill {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fill {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 /* MENUPAGE */
 .menu_logo {
   font-family: 'Shrikhand';
@@ -681,9 +508,178 @@ a {
   background: white;
 }
 
+.logo {
+  font-family: 'Shrikhand';
+}
+
 .return {
   border: none;
   background: white;
+}
+
+.bloc-right {
+  width: 0%;
+  display: none;
+  padding: 20px;
+}
+
+.starter-list,
+.main-list,
+.dessert-list {
+  background: white;
+  margin-bottom: 24px;
+  border-radius: 25px;
+  -webkit-box-shadow: 6px 6px 9px #eceaea;
+          box-shadow: 6px 6px 9px #eceaea;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 95%;
+}
+
+.starter-list:hover .bloc-left,
+.main-list:hover .bloc-left,
+.dessert-list:hover .bloc-left {
+  -webkit-animation: 2s decrease;
+          animation: 2s decrease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.starter-list:hover .bloc-right,
+.main-list:hover .bloc-right,
+.dessert-list:hover .bloc-right {
+  display: block;
+  -webkit-animation: 2s checkbox;
+          animation: 2s checkbox;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background: #99e2d0;
+  position: relative;
+  height: 75px;
+  text-align: center;
+  border-radius: 0 25px 25px 0;
+}
+
+.starter-list:hover .bloc-right .fa-circle-check,
+.main-list:hover .bloc-right .fa-circle-check,
+.dessert-list:hover .bloc-right .fa-circle-check {
+  color: white;
+  -webkit-animation: 0.7s check;
+          animation: 0.7s check;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+@-webkit-keyframes checkbox {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes checkbox {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@-webkit-keyframes decrease {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes decrease {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes check {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes check {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.bloc-left {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bloc-left .starter_text,
+.bloc-left .main_text,
+.bloc-left .dessert_text {
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.bloc-left .starter_text p,
+.bloc-left .main_text p,
+.bloc-left .dessert_text p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.price {
+  font-weight: bold;
 }
 
 .title_menu {
@@ -732,6 +728,7 @@ a {
   font-size: 22px;
   border-bottom: #99e2d0 solid 3px;
   width: 12%;
+  margin-left: 16px;
 }
 
 .description {
