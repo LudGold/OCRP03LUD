@@ -517,10 +517,91 @@ a {
   background: white;
 }
 
+.bloc-left {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bloc-left .starter_text,
+.bloc-left .main_text,
+.bloc-left .dessert_text {
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.bloc-left .starter_text p,
+.bloc-left .main_text p,
+.bloc-left .dessert_text p {
+  width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.price {
+  font-weight: bold;
+}
+
 .bloc-right {
   width: 0%;
   display: none;
   padding: 20px;
+}
+
+.starter-list:hover .bloc-left p,
+.main-list:hover .bloc-left p,
+.dessert-list:hover .bloc-left p {
+  -webkit-animation: 1.5s decrease;
+          animation: 1.5s decrease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.starter-list:hover .bloc-right,
+.main-list:hover .bloc-right,
+.dessert-list:hover .bloc-right {
+  display: block;
+  -webkit-animation: 1.5s checkbox;
+          animation: 1.5s checkbox;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background: #99e2d0;
+  position: relative;
+  height: 75px;
+  text-align: center;
+  border-radius: 0 25px 25px 0;
+}
+
+.starter-list:hover .bloc-right .fa-circle-check,
+.main-list:hover .bloc-right .fa-circle-check,
+.dessert-list:hover .bloc-right .fa-circle-check {
+  color: white;
+  -webkit-animation: 0.53s check;
+          animation: 0.53s check;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
 }
 
 .starter-list,
@@ -541,45 +622,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 95%;
-}
-
-.starter-list:hover .bloc-left,
-.main-list:hover .bloc-left,
-.dessert-list:hover .bloc-left {
-  -webkit-animation: 2s decrease;
-          animation: 2s decrease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.starter-list:hover .bloc-right,
-.main-list:hover .bloc-right,
-.dessert-list:hover .bloc-right {
-  display: block;
-  -webkit-animation: 2s checkbox;
-          animation: 2s checkbox;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  background: #99e2d0;
-  position: relative;
-  height: 75px;
-  text-align: center;
-  border-radius: 0 25px 25px 0;
-}
-
-.starter-list:hover .bloc-right .fa-circle-check,
-.main-list:hover .bloc-right .fa-circle-check,
-.dessert-list:hover .bloc-right .fa-circle-check {
-  color: white;
-  -webkit-animation: 0.7s check;
-          animation: 0.7s check;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 30px;
 }
 
 @-webkit-keyframes checkbox {
@@ -602,19 +644,19 @@ a {
 
 @-webkit-keyframes decrease {
   0% {
-    width: 100%;
+    width: 300px;
   }
   100% {
-    width: 80%;
+    width: 150px;
   }
 }
 
 @keyframes decrease {
   0% {
-    width: 100%;
+    width: 300px;
   }
   100% {
-    width: 80%;
+    width: 150px;
   }
 }
 
@@ -638,48 +680,6 @@ a {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-}
-
-.bloc-left {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.bloc-left .starter_text,
-.bloc-left .main_text,
-.bloc-left .dessert_text {
-  width: 100%;
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.bloc-left .starter_text p,
-.bloc-left .main_text p,
-.bloc-left .dessert_text p {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin-bottom: 0px;
-}
-
-.price {
-  font-weight: bold;
 }
 
 .title_menu {

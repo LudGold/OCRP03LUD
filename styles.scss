@@ -399,10 +399,65 @@
            background: white;
        }
        
+       .bloc-left {
+           width: 100%;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           .starter_text,
+           .main_text,
+           .dessert_text {
+               width: 100%;
+               padding: 10px;
+               display: flex;
+               justify-content: space-between;
+               align-items: flex-end;
+               p {
+                   width: 300px;
+                   text-overflow: ellipsis;
+                   white-space: nowrap;
+                   overflow: hidden;
+                   margin-bottom: 0px;
+               }
+           }
+       }
+       
+       .price {
+           font-weight: bold;
+       }
+       
        .bloc-right {
            width: 0%;
            display: none;
            padding: 20px;
+       }
+       
+       .starter-list:hover,
+       .main-list:hover,
+       .dessert-list:hover {
+           .bloc-left {
+               p {
+                   animation: 1.5s decrease;
+                   animation-fill-mode: forwards;
+               }
+           }
+           .bloc-right {
+               display: block;
+               animation: 1.5s checkbox;
+               animation-fill-mode: forwards;
+               background: #99e2d0;
+               position: relative;
+               height: 75px;
+               text-align: center;
+               border-radius: 0 25px 25px 0;
+               .fa-circle-check {
+                   color: white;
+                   animation: 0.53s check;
+                   animation-fill-mode: forwards;
+                   align-items: center;
+                   margin-top: 30px;
+               }
+           }
        }
        
        .starter-list,
@@ -416,33 +471,6 @@
            display: flex;
            justify-content: space-between;
            align-items: center;
-           width: 95%;
-       }
-       
-       .starter-list:hover,
-       .main-list:hover,
-       .dessert-list:hover {
-           .bloc-left {
-               animation: 2s decrease;
-               animation-fill-mode: forwards;
-           }
-           .bloc-right {
-               display: block;
-               animation: 2s checkbox;
-               animation-fill-mode: forwards;
-               background: #99e2d0;
-               position: relative;
-               height: 75px;
-               text-align: center;
-               border-radius: 0 25px 25px 0;
-               .fa-circle-check {
-                   color: white;
-                   animation: 0.7s check;
-                   animation-fill-mode: forwards;
-                   align-items: center;
-                   margin-top: 30px;
-               }
-           }
        }
        
        @keyframes checkbox {
@@ -456,10 +484,10 @@
        
        @keyframes decrease {
            0% {
-               width: 100%;
+               width: 300px;
            }
            100% {
-               width: 80%;
+               width: 150px;
            }
        }
        
@@ -470,32 +498,6 @@
            100% {
                transform: rotate(0deg);
            }
-       }
-       
-       .bloc-left {
-           width: 100%;
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           .starter_text,
-           .main_text,
-           .dessert_text {
-               width: 100%;
-               padding: 20px;
-               display: flex;
-               justify-content: space-between;
-               align-items: flex-end;
-               p {
-                   text-overflow: ellipsis;
-                   white-space: nowrap;
-                   overflow: hidden;
-                   margin-bottom: 0px;
-               }
-           }
-       }
-       
-       .price {
-           font-weight: bold;
        }
        
        .title_menu {

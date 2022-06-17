@@ -4,15 +4,38 @@
   }
   .restaurants_picture {
     width: 80%;
-    height: 80%;
+    height: 400px;
     border-radius: 246px;
     margin-left: 14rem;
   }
   .title_menu {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    position: -webkit-sticky;
-    position: sticky;
+    position: static;
+  }
+  .starter-list:hover .bloc-left p,
+  .main-list:hover .bloc-left p,
+  .dessert-list:hover .bloc-left p {
+    -webkit-animation: 0.5s decrease_desktop;
+            animation: 0.5s decrease_desktop;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes decrease_desktop {
+    0% {
+      width: 600px;
+    }
+    100% {
+      width: 300px;
+    }
+  }
+  @keyframes decrease_desktop {
+    0% {
+      width: 600px;
+    }
+    100% {
+      width: 300px;
+    }
   }
   .order {
     width: 280px;
