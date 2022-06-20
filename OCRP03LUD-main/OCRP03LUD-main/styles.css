@@ -585,7 +585,6 @@ a {
           animation-fill-mode: forwards;
   background: #99e2d0;
   position: relative;
-  height: 75px;
   text-align: center;
   border-radius: 0 25px 25px 0;
 }
@@ -772,7 +771,6 @@ input.search_order {
   font-size: 20px;
   color: white;
   margin-bottom: 6px;
-  cursor: pointer;
 }
 
 .animation_menu:nth-child(1n+1) {
@@ -863,3 +861,4 @@ input.search_order {
             transform: translateY(0px);
   }
 }
+/*# sourceMappingURL=styles.css.map */

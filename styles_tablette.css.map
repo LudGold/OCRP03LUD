@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK,OAAO,SAAS,EAAE,KAAK;EACtD,AAAA,EAAE,CAAC;IACC,OAAO,EAAE,IAAI;IACb,eAAe,EAAE,YAAY;GAChC;EACD,AAAA,MAAM,CAAC;IACH,WAAW,EAAE,KAAK;GACrB;EACD,AAAA,YAAY,CAAC,EAAE,CAAC;IACZ,KAAK,EAAE,EAAE;GACZ",
+    "sources": [
+        "styles_tablette.scss"
+    ],
+    "names": [],
+    "file": "styles_tablette.css"
+}
